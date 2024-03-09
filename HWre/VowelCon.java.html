@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>VowelCon.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+VowelCon.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">VowelCon </span><span class="s2">{</span>
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">Scanner scanner </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s3">&quot;Enter a string: &quot;</span><span class="s2">);</span>
+        <span class="s1">String inputString </span><span class="s2">= </span><span class="s1">scanner</span><span class="s2">.</span><span class="s1">nextLine</span><span class="s2">().</span><span class="s1">toLowerCase</span><span class="s2">();</span>
+
+        <span class="s0">int </span><span class="s1">vowelCount </span><span class="s2">= </span><span class="s4">0</span><span class="s2">;</span>
+        <span class="s0">int </span><span class="s1">consonantCount </span><span class="s2">= </span><span class="s4">0</span><span class="s2">;</span>
+
+        <span class="s0">for </span><span class="s2">(</span><span class="s0">int </span><span class="s1">i </span><span class="s2">= </span><span class="s4">0</span><span class="s2">; </span><span class="s1">i </span><span class="s2">&lt; </span><span class="s1">inputString</span><span class="s2">.</span><span class="s1">length</span><span class="s2">(); </span><span class="s1">i</span><span class="s2">++) {</span>
+            <span class="s0">char </span><span class="s1">ch </span><span class="s2">= </span><span class="s1">inputString</span><span class="s2">.</span><span class="s1">charAt</span><span class="s2">(</span><span class="s1">i</span><span class="s2">);</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">ch </span><span class="s2">&gt;= </span><span class="s3">'a' </span><span class="s2">&amp;&amp; </span><span class="s1">ch </span><span class="s2">&lt;= </span><span class="s3">'z'</span><span class="s2">) {</span>
+                <span class="s0">if </span><span class="s2">(</span><span class="s1">ch </span><span class="s2">== </span><span class="s3">'a' </span><span class="s2">|| </span><span class="s1">ch </span><span class="s2">== </span><span class="s3">'e' </span><span class="s2">|| </span><span class="s1">ch </span><span class="s2">== </span><span class="s3">'i' </span><span class="s2">|| </span><span class="s1">ch </span><span class="s2">== </span><span class="s3">'o' </span><span class="s2">|| </span><span class="s1">ch </span><span class="s2">== </span><span class="s3">'u'</span><span class="s2">) {</span>
+                    <span class="s1">vowelCount</span><span class="s2">++;</span>
+                <span class="s2">} </span><span class="s0">else </span><span class="s2">{</span>
+                    <span class="s1">consonantCount</span><span class="s2">++;</span>
+                <span class="s2">}</span>
+            <span class="s2">}</span>
+        <span class="s2">}</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Vowel count: &quot; </span><span class="s2">+ </span><span class="s1">vowelCount</span><span class="s2">);</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s3">&quot;Consonant count: &quot; </span><span class="s2">+ </span><span class="s1">consonantCount</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
